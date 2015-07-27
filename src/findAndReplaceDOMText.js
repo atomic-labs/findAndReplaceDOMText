@@ -1,3 +1,6 @@
+// THIS VERSION IS LOCKED AND MAINTAINED BY ATOMIC FOR USE IN HIGHLIGHT.
+// 0.4.3, NPM and AMD loading has been removed.
+
 /**
  * findAndReplaceDOMText v 0.4.3
  * @author James Padolsey http://james.padolsey.com
@@ -8,16 +11,8 @@
  * in the specified element.
  */
  (function (root, factory) {
-     if (typeof module === 'object' && module.exports) {
-         // Node/CommonJS
-         module.exports = factory();
-     } else if (typeof define === 'function' && define.amd) {
-         // AMD. Register as an anonymous module.
-         define(factory);
-     } else {
-         // Browser globals
-         root.findAndReplaceDOMText = factory();
-     }
+     // Browser globals
+     root.findAndReplaceDOMText = factory();
  }(this, function factory() {
 
 	var PORTION_MODE_RETAIN = 'retain';
